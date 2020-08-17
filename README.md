@@ -45,15 +45,14 @@ run the script
 ## Getting started :mag_right:
 1. install python 3 (+ check the pip3 is installed or not should u install)
 2. install python package
-_steps_:
+#### _steps_:
 	```
 	pip3 install colorama
 	pip3 install requests
 	pip3 install beautifulsoup4
 	```
-	> or u can run the setup script to install all it - typing `python3 setup.py`
-_run_:
-
+	> or u can run the setup script to install all it - typing `python3 setup.py` .
+#### _run_:
 go to the folder & typing `python3 mainlinux.py`
 
 ## Features :fire:
