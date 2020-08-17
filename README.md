@@ -51,7 +51,7 @@ run the script
 	pip3 install requests
 	pip3 install beautifulsoup4
 	```
-	> or u can run the setup script to install all it - typing `python3 setup.py` .
+> or u can run the setup script to install all it - typing `python3 setup.py` .
 #### _run_:
 go to the folder & typing `python3 mainlinux.py`
 
