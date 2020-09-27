@@ -8,10 +8,9 @@ _if you want to download all the site (get template) should clean the directorie
 run the script_
 
 # Getting started :mag_right:
-```
+```shell
   1. install python 3 (check the pip3 is installed or not [should u install])
-  2. install python package
-
+  2. install && usage : 
       $ git clone https://github.com/xreaad/Qget.git
       $ cd Qget
       $ python3 requirement.py
