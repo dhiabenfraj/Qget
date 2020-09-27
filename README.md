@@ -10,10 +10,8 @@
                                
 ```
 
-# What is Qget :bomb:
+# What is Qget :bomb: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)
 This tool help you when you want to scrapping any site u need
-
-`python3 Qget.py --help` to see how to use
 
 Attention:
 if you want to download all the site (get template) should clean the directorie (where you put the information from the site) before
