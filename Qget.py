@@ -4,7 +4,7 @@
 	author : xreaad
 	name : Qget
 	description: 
-		Qget is a tool based on oop created by xreaad to scrapping web sites && a lot more things like 
+		Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
 			[1] - post && get data
 			[2] - download files from site
 			[3] - get information from site 
