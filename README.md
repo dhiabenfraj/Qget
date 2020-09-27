@@ -10,14 +10,14 @@
                                
 ```
 
-# What is Qget :bomb: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)
+# What is Qget :rocket: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)
 This tool help you when you want to scrapping any site u need
 
-Attention:
+Attention :warning: 
 if you want to download all the site (get template) should clean the directorie (where you put the information from the site) before
 run the script
 
-## Getting started :mag_right:
+# Getting started :mag_right:
 1. install python 3 (+ check the pip3 is installed or not should u install)
 2. install python package
 
