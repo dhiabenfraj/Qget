@@ -1,38 +1,16 @@
 
 
 ```
-    ▄████ ▓█████▄▄▄█████▓                          
-   ██▒ ▀█▒▓█   ▀▓  ██▒ ▓▒                         
-  ▒██░▄▄▄░▒███  ▒ ▓██░ ▒░                          
-  ░▓█  ██▓▒▓█  ▄░ ▓██▓ ░                           
-  ░▒▓███▀▒░▒████▒ ▒██▒ ░                           
-   ░▒   ▒ ░░ ▒░ ░ ▒ ░░                             
-    ░   ░  ░ ░  ░   ░                              
-  ░ ░   ░    ░    ░                                
-        ░    ░  ░                                 
-                                                   
-    ██████  ██▓▄▄▄█████▓▓█████                     
-  ▒██    ▒ ▓██▒▓  ██▒ ▓▒▓█   ▀                     
-  ░ ▓██▄   ▒██▒▒ ▓██░ ▒░▒███                      
-    ▒   ██▒░██░░ ▓██▓ ░ ▒▓█  ▄                     
-  ▒██████▒▒░██░  ▒██▒ ░ ░▒████▒                    
-  ▒ ▒▓▒ ▒ ░░▓    ▒ ░░   ░░ ▒░ ░                    
-  ░ ░▒  ░ ░ ▒ ░    ░     ░ ░  ░                    
-  ░  ░  ░   ▒ ░  ░         ░                      
-        ░   ░              ░  ░                    
-    ██████  ▄████▄   ██▀███   ██▓ ██▓███  ▄▄▄█████▓
-  ▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▓██▒▓██░  ██▒▓  ██▒ ▓▒
-  ░ ▓██▄   ▒▓█    ▄ ▓██ ░▄█ ▒▒██▒▓██░ ██▓▒▒ ▓██░ ▒░
-    ▒   ██▒▒▓▓▄ ▄██▒▒██▀▀█▄  ░██░▒██▄█▓▒ ▒░ ▓██▓ ░ 
-  ▒██████▒▒▒ ▓███▀ ░░██▓ ▒██▒░██░▒██▒ ░  ░  ▒██▒ ░ 
-  ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░░▓  ▒▓▒░ ░  ░  ▒ ░░   
-  ░ ░▒  ░ ░  ░  ▒     ░▒ ░ ▒░ ▒ ░░▒ ░         ░     Created by xreaad
-  ░  ░  ░  ░          ░░   ░  ▒ ░░░         ░      
-        ░  ░ ░         ░      ░                    
-           ░                                       
+        ________                  __   
+        \_____  \    ____   _____/  |_ 
+         /  / \  \  / ___\_/ __ \   __\
+        /   \_/.  \/ /_/  >  ___/|  |  
+        \_____\ \_/\___  / \___  >__|  
+               \__>_____/      \/      
+                               
 ```
 
-# What is Get Site Script :bomb:
+# What is Qget :bomb:
 This tool help you when you want to scrapping any site u need
 
 All the option is in the screen just input what u need and the url of site and the
@@ -57,20 +35,5 @@ go to the folder & typing `python3 mainlinux.py`
 
 ## Features :fire:
 
-the tool check your 'OS' and use the script version to run
 
-```
-(OS --> Script version) :
-
-	('Windows --> mainwin.py')
-	('Linux   --> mainlinux.py')
-	('Mac Os  --> mainmac.py') 
-```
-
-
-## Note :exclamation:
-- I'm not response about any bad using for this tool.
-
-
-
-### all rights are reserved ©
+___all rights are reserved ©___
