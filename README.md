@@ -1,6 +1,6 @@
 ![Qget](https://github.com/xreaad/Qget/blob/master/assets/bannerr.png "Qget")
 
-# What is Qget :rocket: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)
+# What is Qget :rocket: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)  [![version: 0.1](https://img.shields.io/badge/Version-0.1-green.svg)]
 This tool help you when you want to scrapping any site u need
 
 ___Attention :warning:___ <br>
