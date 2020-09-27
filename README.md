@@ -14,7 +14,6 @@
 This tool help you when you want to scrapping any site u need
 
 Attention :warning:
-
 if you want to download all the site (get template) should clean the directorie (where you put the information from the site) before
 run the script
 
