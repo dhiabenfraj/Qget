@@ -5,6 +5,8 @@
 	description: 
 
 '''
+
+from bs4 import BeautifulSoup
 from banner import logo
 import os
 import sys
@@ -26,9 +28,31 @@ bold = '\033[01m'
 logo()
 
 class searching():
-	"""searching : search for all item in the site case the order of user"""
-	def __init__(self, arg):
+	"""searching : search for all item in the site case the order of user
+		searching process : 
+			[1] - find the main files && all assets files of the site
+			[2] - ...
+	"""
+	def __init__(self, url):
+		self.url = url
+		self.re = requests.get(url)
+		self.soup = BeautifulSoup(re.text, 'html.parser')
+
+	def all_element(self):
 		pass
 
 		
-input()
+
+
+
+
+
+
+
+def start(job):
+	""" print the job on the screen with coloring"""
+	print(f'{blue}[{green}+{blue}]{yellow} {job}')
+
+def error(err):
+	""" print the error with coloring """
+	print(f'{blue}[{red}!{blue}]{yellow} {err}')
