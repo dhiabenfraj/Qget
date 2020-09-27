@@ -2,8 +2,14 @@
 
 '''
 	author : xreaad
+	name : Qget
 	description: 
-
+		Qget is a tool based on oop created by xreaad to scrapping web sites && a lot more things like 
+			[1] - post && get data
+			[2] - download files from site
+			[3] - get information from site 
+			[4] - finding elemnts of the site 
+			[.] - etc ..
 '''
 
 from bs4 import BeautifulSoup
@@ -56,3 +62,8 @@ def start(job):
 def error(err):
 	""" print the error with coloring """
 	print(f'{blue}[{red}!{blue}]{yellow} {err}')
+
+
+
+start('building soup && directories')
+input()

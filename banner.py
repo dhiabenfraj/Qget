@@ -16,7 +16,7 @@ def logo():
 	{green}		 /  / \  \ {yellow} / ___\_/ __ \   __\
 	{green}		/   \_/.  \{yellow}/ /_/  >  ___/|  |  
 	{green}		\_____\ \_/{yellow}\___  / \___  >__|  
-	{green}		       \__>{yellow}_____/      \/{blue} created by{green} xreaad		  
+	{green}		       \__>{yellow}_____/      \/{blue}created by{green} xreaad		  
 	{red}	_________________________________________________ {yellow}
     
 	""".format(bold=bold, red=red, green=green, yellow=yellow, blue=blue))
