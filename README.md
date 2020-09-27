@@ -24,7 +24,7 @@ run the script
 ```
   git clone https://github.com/xreaad/Qget.git
   cd Qget
-  python3 setup.py
+  python3 requirement.py
   python3 Qget.py --help
 ```
 
