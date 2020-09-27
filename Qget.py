@@ -5,7 +5,7 @@
 	description: 
 
 '''
-
+from banner import logo
 import os
 import sys
 from colorama import *
@@ -23,14 +23,12 @@ yellow = '\033[93m'
 nocolor = '\033[00m'
 bold = '\033[01m'
 
-def logo():
-	print(r""" {bold}
-	{green}			________   {yellow}               __   
-	{green}			\_____  \  {yellow}  ____   _____/  |_ 
-	{green}			 /  / \  \ {yellow} / ___\_/ __ \   __\
-	{green}			/   \_/.  \{yellow}/ /_/  >  ___/|  |  
-	{green}			\_____\ \_/{yellow}\___  / \___  >__|  
-	{green}			       \__>{yellow}_____/      \/      
-	""".format(bold=bold, green=green, yellow=yellow))
+logo()
 
+class searching():
+	"""searching : search for all item in the site case the order of user"""
+	def __init__(self, arg):
+		pass
 
+		
+input()
