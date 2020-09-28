@@ -82,7 +82,7 @@ def parse():
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
 	parser.add_argument('-p', '--post', help='post data to the site', type=str)
-	parser.add_argument('-d', '--download', help='download source code of on the site', type=str)
+	parser.add_argument('-d', '--download', help='download file from the site', type=str)
 	parser.add_argument('url', help='url of the site', type=str)
 	args = parser.parse_args()
 	return args
