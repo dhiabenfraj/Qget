@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 from colorama import *
 
 red = '\033[91m'
@@ -7,6 +9,7 @@ purple = '\033[35m'
 yellow = '\033[93m'
 nocolor = '\033[00m'
 bold = '\033[01m'
+
 
 def logo():
 	print(r""" {bold}
