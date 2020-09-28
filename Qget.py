@@ -1,13 +1,11 @@
 #! /usr/bin/env python3
 
+__author__ = 'xreaad'
+__password__ = '0xreaad'
 
-"""	author : xreaad
+__description__ = """
 	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
-	[1] - post && get data
-	[2] - download files from site
-	[3] - get information from site 
-	[4] - finding elemnts of the site 
-	[.] - etc ..
+	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
 """
 
 from bs4 import BeautifulSoup
@@ -18,8 +16,6 @@ from colorama import *
 from time import sleep
 import requests
 import argparse
-
-__password__ = '0xreaad'
 
 red = '\033[91m'
 blue = '\033[94m'
@@ -42,7 +38,7 @@ def error(err): # print the error
 class searching():
 	"""	searching : search for all item in the site case the order of user
 		searching process : 
-			[1] - find the main files && all assets files of the site
+		- find the main files && all assets files of the site
 	"""
 	
 	bad_type = [None, '', '#'] # list to stay away when searching
@@ -53,7 +49,7 @@ class searching():
 		self.soup = BeautifulSoup(self.re.text, 'html.parser')
 
 
-	def all_element(self):
+	def all_files(self):
 		""" search all the items in the site && put them in lists
 			&& remove duplicates from the lists of elements 
 			return html_files, img_files, css_files, script_files """
@@ -74,25 +70,27 @@ class searching():
 	def user_search(self, **filtres):
 		pass
 
+	def find_script(self):
+		pass
 
 
 
 def parse():
-	parser = argparse.ArgumentParser(description='..')
+	parser = argparse.ArgumentParser(description=__description__)
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
+	parser.add_argument('-o', '--path', help='path when u save the file', type=str)
 	parser.add_argument('-p', '--post', help='post data to the site', type=str)
+	parser.add_argument('-g', '--get', help='get data from the site', type=str)
 	parser.add_argument('-d', '--download', help='download file from the site', type=str)
-	parser.add_argument('url', help='url of the site', type=str)
+	parser.add_argument('url', help='url of the site url shoul start with http:// or https://', type=str)
 	args = parser.parse_args()
 	return args
 	
 def Qget():
 	argument = parse()
-	try:
-		re = requests.get(args.url)
-	except Exception:
-		error("check the url should strat with 'http://' or 'https://' && the connection")
+	search = searching(argument.url)
+
 
 if __name__ == '__main__':
 	Qget()
