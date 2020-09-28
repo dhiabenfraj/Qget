@@ -1,16 +1,14 @@
 #! /usr/bin/env python3
 
-'''
-	author : xreaad
-	name : Qget
-	description: 
-		Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
-			[1] - post && get data
-			[2] - download files from site
-			[3] - get information from site 
-			[4] - finding elemnts of the site 
-			[.] - etc ..
-'''
+
+"""	author : xreaad
+	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
+	[1] - post && get data
+	[2] - download files from site
+	[3] - get information from site 
+	[4] - finding elemnts of the site 
+	[.] - etc ..
+"""
 
 from bs4 import BeautifulSoup
 from banner import logo
@@ -42,10 +40,9 @@ def error(err): # print the error
 
 
 class searching():
-	"""searching : search for all item in the site case the order of user
+	"""	searching : search for all item in the site case the order of user
 		searching process : 
 			[1] - find the main files && all assets files of the site
-			[2] - ...
 	"""
 	
 	bad_type = [None, '', '#'] # list to stay away when searching
@@ -78,3 +75,24 @@ class searching():
 		pass
 
 
+
+
+def parse():
+	parser = argparse.ArgumentParser(description='..')
+	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
+	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
+	parser.add_argument('-p', '--post', help='post data to the site', type=str)
+	parser.add_argument('-d', '--download', help='download source code of on the site', type=str)
+	parser.add_argument('url', help='url of the site', type=str)
+	args = parser.parse_args()
+	return args
+	
+def Qget():
+	argument = parse()
+	try:
+		re = requests.get(args.url)
+	except Exception:
+		error("check the url should strat with 'http://' or 'https://' && the connection")
+
+if __name__ == '__main__':
+	Qget()
