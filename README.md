@@ -1,6 +1,6 @@
 ![Qget](https://github.com/xreaad/Qget/blob/master/assets/bannerr.png "Qget")
 
-# What is Qget :rocket: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)  ![version: 0.1](https://img.shields.io/badge/Version-0.1-green.svg)  ![version: 0.1](https://img.shields.io/badge/python-3-green.svg)
+# What is Qget :rocket: [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/xreaad/Qget/blob/master/LICENSE)  ![version: 0.1](https://img.shields.io/badge/Version-0.1-yellow.svg)  ![version: 0.1](https://img.shields.io/badge/python-3-blue.svg)
 __Qget__ is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
 * post && get data
 * download files from site
