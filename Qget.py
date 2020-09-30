@@ -1,19 +1,7 @@
 #! /usr/bin/env python3
 
-__author__ = 'xreaad'
-__password__ = '0xreaad'
-
-__description__ = """
-	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
-	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
-"""
-
-__help__ = """
-	
-"""
 
 from bs4 import BeautifulSoup
-from banner import logo
 import os
 import sys
 from colorama import *
@@ -29,7 +17,26 @@ yellow = '\033[93m'
 nocolor = '\033[00m'
 bold = '\033[01m'
 
-logo() # print the banner
+__author__ = 'xreaad'
+__password__ = '0xreaad'
+
+__description__ = r"""
+	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
+	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
+"""
+
+__help__ = r"""{bold}
+	{red}	_________________________________________________
+	{green}		________   {yellow}               __   
+	{green}		\_____  \  {yellow}  ____   _____/  |_
+	{green}		 /  / \  \ {yellow} / ___\_/ __ \   __\
+	{green}		/   \_/.  \{yellow}/ /_/  >  ___/|  |  
+	{green}		\_____\ \_/{yellow}\___  / \___  >__|  
+	{green}		       \__>{yellow}_____/      \/{blue}created by{green} xreaad		  
+	{red}	_________________________________________________ {yellow}
+
+""".format(bold=bold, red=red, green=green, yellow=yellow, blue=blue)
+
 
 
 def start(job): # print the starting job
@@ -72,10 +79,15 @@ class searching():
 		return html_files, img_files, css_files, script_files
 
 	def user_search(self, **filtres):
-		pass
+		self.tag_name = filtres['tagname']
+		self.class_name = filtres['classname']
+		self.id_name = filtres['idname']
+		
+
 
 	def find_script(self):
 		pass
+
 
 
 
@@ -83,7 +95,10 @@ def parse():
 	parser = argparse.ArgumentParser(description=__description__)
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
-	parser.add_argument('-o', '--path', help='path when u save the file', type=str)
+	parser.add_argument('-o', '--output', help='Save the results to text file')
+	parser.add_argument('-tn', '--tagname', help='filtre to search ', type=str)
+	parser.add_argument('-cn', '--classname', help='filtre to search ', type=str)
+	parser.add_argument('-id', help='filtre to search', type=str)
 	parser.add_argument('-p', '--post', help='post data to the site', type=str)
 	parser.add_argument('-g', '--get', help='get data from the site', type=str)
 	parser.add_argument('-d', '--download', help='download file from the site', type=str)
@@ -92,9 +107,10 @@ def parse():
 	return args
 	
 def Qget():
-	argument = parse()
-	search = searching(argument.url)
-
+	arguments = parse()
+	search = searching(arguments.url)
+	search.user_search(tagname=arguments.tagname, classname=arguments.classname, idname=arguments.idname)
+	print(arguments)
 
 if __name__ == '__main__':
 	Qget()
