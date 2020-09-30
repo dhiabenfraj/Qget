@@ -21,22 +21,22 @@ bold = '\033[01m'
 __author__ = 'xreaad'
 __password__ = '0xreaad'
 
-__description__ = r"""
+__description__ = """
 	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
 	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
 """
 
-__help__ = r"""{bold}
-	{red}	_________________________________________________
-	{green}		________   {yellow}               __   
-	{green}		\_____  \  {yellow}  ____   _____/  |_
-	{green}		 /  / \  \ {yellow} / ___\_/ __ \   __\
-	{green}		/   \_/.  \{yellow}/ /_/  >  ___/|  |  
-	{green}		\_____\ \_/{yellow}\___  / \___  >__|  
-	{green}		       \__>{yellow}_____/      \/{blue}created by{green} xreaad		  
-	{red}	_________________________________________________ {yellow}
+__help__ = r"""{b}
+	{r}	_________________________________________________
+	{g}		________   {y}               __   
+	{g}		\_____  \  {y}  ____   _____/  |_
+	{g}		 /  / \  \ {y} / ___\_/ __ \   __\
+	{g}		/   \_/.  \{y}/ /_/  >  ___/|  |  
+	{g}		\_____\ \_/{y}\___  / \___  >__|  
+	{g}		       \__>{y}_____/      \/{blue}created by{g} xreaad		  
+	{r}	_________________________________________________ {y}
 
-""".format(bold=bold, red=red, green=green, yellow=yellow, blue=blue)
+""".format(b=bold, r=red, g=green, y=yellow, blue=blue)
 
 
 
