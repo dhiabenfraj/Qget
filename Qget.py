@@ -4,6 +4,7 @@
 from bs4 import BeautifulSoup
 import os
 import sys
+import re
 from colorama import *
 from time import sleep
 import requests
@@ -82,7 +83,7 @@ class searching():
 		self.tag_name = filtres['tagname']
 		self.class_name = filtres['classname']
 		self.id_name = filtres['idname']
-		
+
 
 
 	def find_script(self):
