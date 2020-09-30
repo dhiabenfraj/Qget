@@ -25,4 +25,3 @@ run the script_
 ```
 
 
-___all rights are reserved ©___
