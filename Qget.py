@@ -8,6 +8,10 @@ __description__ = """
 	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
 """
 
+__help__ = """
+	
+"""
+
 from bs4 import BeautifulSoup
 from banner import logo
 import os
