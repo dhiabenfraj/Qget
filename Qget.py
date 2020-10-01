@@ -82,7 +82,14 @@ class searching():
 	def user_search(self, **filtres):
 		self.tag_name = filtres['tagname']
 		self.class_name = filtres['classname']
-		self.id_name = filtres['idname']
+		self.id_name = filtres['id']
+
+		if self.tag_name != None:
+			tags_name = [tag_name for tag_name in self.soup.find_all(self.tag_name)]
+		
+		if self.class_name != None:
+			pass
+
 
 
 
@@ -94,23 +101,24 @@ class searching():
 
 def parse():
 	parser = argparse.ArgumentParser(description=__description__)
+	parser.add_argument('-a', '--all', help='search in all file of the site')
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
 	parser.add_argument('-o', '--output', help='Save the results to text file')
-	parser.add_argument('-tn', '--tagname', help='filtre to search ', type=str)
-	parser.add_argument('-cn', '--classname', help='filtre to search ', type=str)
+	parser.add_argument('-tn', '--tag-name', help='filtre to search ', type=str)
+	parser.add_argument('-cn', '--class-name', help='filtre to search ', type=str)
 	parser.add_argument('-id', help='filtre to search', type=str)
+	parser.add_argument('-t', '--text', help='print result without tags and heading information only the text', action='store_true')
 	parser.add_argument('-p', '--post', help='post data to the site', type=str)
 	parser.add_argument('-g', '--get', help='get data from the site', type=str)
 	parser.add_argument('-d', '--download', help='download file from the site', type=str)
 	parser.add_argument('url', help='url of the site url shoul start with http:// or https://', type=str)
-	args = parser.parse_args()
-	return args
+	return parser.parse_args()
 	
 def Qget():
 	arguments = parse()
 	search = searching(arguments.url)
-	search.user_search(tagname=arguments.tagname, classname=arguments.classname, idname=arguments.idname)
+	search.user_search(tagname=arguments.tagname, classname=arguments.classname, id=arguments.id)
 	print(arguments)
 
 if __name__ == '__main__':
