@@ -90,13 +90,15 @@ class searching():
 		if self.class_name != None:
 			pass
 
-
-
-
 	def find_script(self):
 		pass
 
 
+
+	class filemanager():
+		def __init__(self):
+			pass
+			
 
 
 def parse():
