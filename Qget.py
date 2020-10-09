@@ -66,7 +66,7 @@ class searching():
 			&& remove duplicates from the lists of elements 
 			return html_files, img_files, css_files, script_files """
 
-		html_files = [link.get('href') for link in self.soup.find_all('a') if not link.get('href') in self.bad_type]
+		html_files = [link.get('href') for link in self.soup.find_all('a') if not link.get('href') in self.bad_type and not link.get('href').startswith('#')]
 		img_files = [link.get('src') for link in self.soup.find_all('img') if not link.get('src') in self.bad_type]
 		css_files = [link.get('href') for link in self.soup.find_all('link') if not link.get('href') in self.bad_type]
 		script_files = [link.get('src') for link in self.soup.find_all('script') if not link.get('src') in self.bad_type]
@@ -97,9 +97,31 @@ class searching():
 
 class filemanager():
 	""" files mangement process will be here """
-	def __init__(self):
-		pass
+	def __init__(self, elements):
+		self.elements = elements
+
+	def build_dir(self):
+		for element in self.elements:
+			if not element.startswith('http'):
+				slicing = element.split('/')
+				file_name = slicing.pop()
+				pass
+	
 			
+
+def download(url):
+	elements = []
+	searcher = searching(url)
+	html_files, img_files, css_files, script_files = searcher.all_files()
+	elements.extend(html_files)
+	elements.extend(img_files)
+	elements.extend(css_files)
+	elements.extend(script_files)
+	manager = filemanager(elements)
+	manager.build_dir()
+	
+		
+		
 
 
 def parse():
@@ -119,10 +141,8 @@ def parse():
 	return parser.parse_args()
 	
 def Qget():
-	arguments = parse()
-	search = searching(arguments.url)
-	search.user_search(tagname=arguments.tagname, classname=arguments.classname, id=arguments.id)
-	print(arguments)
+	args = parse()
+	download(args.url)
 
 if __name__ == '__main__':
 	Qget()
