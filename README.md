@@ -14,10 +14,10 @@ This tool help you when you want to scrapping any site u need
 
 # Getting started :mag_right:
 ```
-  	git clone https://github.com/xreaad/Qget.git
-  	cd Qget
-  	python3 -m pip install -r requirements.txt
-  	python3 Qget.py --help
+git clone https://github.com/xreaad/Qget.git
+cd Qget
+python3 -m pip install -r requirements.txt
+python3 Qget.py --help
 ```
 
 
