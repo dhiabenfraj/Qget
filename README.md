@@ -16,12 +16,10 @@ run the script_
 
 # Getting started :mag_right:
 ```
-  1. install python 3 (check the pip3 is installed or not [should u install])
-  2. install && usage : 
-      $ git clone https://github.com/xreaad/Qget.git
-      $ cd Qget
-      $ python3 requirement.py
-      $ python3 Qget.py --help
+  	git clone https://github.com/xreaad/Qget.git
+  	cd Qget
+  	python3 -m pip install -r requirements.txt
+  	python3 Qget.py --help
 ```
 
 

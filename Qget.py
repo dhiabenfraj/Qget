@@ -38,7 +38,7 @@ __help__ = r"""{b}
 
 """.format(b=bold, r=red, g=green, y=yellow, blue=blue)
 
-
+print(__help__)
 
 def start(job): # print the starting job
 	print(f'{blue}[{green}+{blue}]{yellow} {job}')
