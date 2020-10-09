@@ -10,9 +10,7 @@ __Qget__ is a tool based on (python oop) created by xreaad to scrapping web site
 
 This tool help you when you want to scrapping any site u need
 
-___Attention :warning:___ <br>
-_if you want to download all the site (get template) should clean the directorie (where you put the information from the site) before
-run the script_
+
 
 # Getting started :mag_right:
 ```
