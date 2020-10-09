@@ -95,9 +95,10 @@ class searching():
 
 
 
-	class filemanager():
-		def __init__(self):
-			pass
+class filemanager():
+	""" files mangement process will be here """
+	def __init__(self):
+		pass
 			
 
 
