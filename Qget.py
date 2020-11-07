@@ -38,7 +38,7 @@ __help__ = r"""{b}
 
 """.format(b=bold, r=red, g=green, y=yellow, blue=blue)
 
-print(__help__)
+
 
 def start(job): # print the starting job
 	print(f'{blue}[{green}+{blue}]{yellow} {job}')
@@ -53,12 +53,12 @@ class searching():
 		- find the main files && all assets files of the site
 	"""
 	
-	bad_type = [None, '', '#'] # list to stay away when searching
 
 	def __init__(self, url):
 		self.url = url
 		self.re = requests.get(url)
 		self.soup = BeautifulSoup(self.re.text, 'html.parser')
+		self.bad_type = [None, '', '#'] # list to stay away when searching
 
 
 	def all_files(self):
@@ -66,10 +66,10 @@ class searching():
 			&& remove duplicates from the lists of elements 
 			return html_files, img_files, css_files, script_files """
 
-		html_files = [link.get('href') for link in self.soup.find_all('a') if not link.get('href') in self.bad_type and not link.get('href').startswith('#')]
-		img_files = [link.get('src') for link in self.soup.find_all('img') if not link.get('src') in self.bad_type]
-		css_files = [link.get('href') for link in self.soup.find_all('link') if not link.get('href') in self.bad_type]
-		script_files = [link.get('src') for link in self.soup.find_all('script') if not link.get('src') in self.bad_type]
+		html_files = [link.get('href') for link in self.soup.find_all('a') if not link.get('href') in self.bad_type and not link.get('href').startswith('#') and not link.get('href').startswith('http')]
+		img_files = [link.get('src') for link in self.soup.find_all('img') if not link.get('src') in self.bad_type and not link.get('src').startswith('#') and not link.get('src').startswith('http')]
+		css_files = [link.get('href') for link in self.soup.find_all('link') if not link.get('href') in self.bad_type and not link.get('href').startswith('#') and not link.get('href').startswith('http')]
+		script_files = [link.get('src') for link in self.soup.find_all('script') if not link.get('src') in self.bad_type and not link.get('src').startswith('#') and not link.get('src').startswith('http')]
 
 		# remove duplicates from the lists of elements
 		html_files = list(dict.fromkeys(html_files))
@@ -100,16 +100,25 @@ class filemanager():
 	def __init__(self, elements):
 		self.elements = elements
 
-	def build_dir(self):
+	def build_directorys(self, path):
+		directory = []
 		for element in self.elements:
 			if not element.startswith('http'):
 				slicing = element.split('/')
 				file_name = slicing.pop()
-				pass
-	
-			
+				directory.append('/'.join(slicing))
 
-def download(url):
+		# remove duplicates from the lists of elements && sorted by length
+		directory = list(dict.fromkeys(directory))
+		directory.sort(key=len)
+
+		os.chdir(path)
+		for _dir in directory:
+			if _dir != '':
+				os.makedirs(_dir)
+		print(directory)
+
+def download(url, path):
 	elements = []
 	searcher = searching(url)
 	html_files, img_files, css_files, script_files = searcher.all_files()
@@ -118,7 +127,15 @@ def download(url):
 	elements.extend(css_files)
 	elements.extend(script_files)
 	manager = filemanager(elements)
-	manager.build_dir()
+	manager.build_directorys(path)
+	os.chdir(path)
+	print(elements)
+	for file in elements:
+		url = url + file
+		re = requests.get(url).content
+		
+		with open(file, 'wb') as f:
+			f.write(re)
 	
 		
 		
@@ -142,7 +159,9 @@ def parse():
 	
 def Qget():
 	args = parse()
-	download(args.url)
+	search = searching(args.url)
+	download(args.url, args.output)
+
 
 if __name__ == '__main__':
 	Qget()
