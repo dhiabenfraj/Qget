@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-
 from bs4 import BeautifulSoup
 import os
 import sys
@@ -52,7 +51,6 @@ class searching():
 		searching process : 
 		- find the main files && all assets files of the site
 	"""
-	
 
 	def __init__(self, url):
 		self.url = url
@@ -136,14 +134,10 @@ def download(url, path):
 		
 		with open(file, 'wb') as f:
 			f.write(re)
-	
-		
-		
-
 
 def parse():
 	parser = argparse.ArgumentParser(description=__description__)
-	parser.add_argument('-a', '--all', help='search in all file of the site')
+	parser.add_argument('-a', '--all', help='search in all file of the site', action='store_true')
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
 	parser.add_argument('-o', '--output', help='Save the results to text file')
@@ -157,6 +151,8 @@ def parse():
 	parser.add_argument('url', help='url of the site url shoul start with http:// or https://', type=str)
 	return parser.parse_args()
 	
+
+
 def Qget():
 	args = parse()
 	search = searching(args.url)
@@ -165,3 +161,7 @@ def Qget():
 
 if __name__ == '__main__':
 	Qget()
+
+
+
+
