@@ -151,7 +151,6 @@ def parse():
 	return parser.parse_args()
 	
 
-
 def Qget():
 	args = parse()
 	search = searching(args.url)
