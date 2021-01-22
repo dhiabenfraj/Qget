@@ -131,8 +131,7 @@ def download(url, path):
 	for file in elements:
 		url = url + file
 		re = requests.get(url).content
-		
-		with open(file, 'wb') as f:
+		with open(file, 'wb') as f: # create file
 			f.write(re)
 
 def parse():
