@@ -25,7 +25,7 @@ __description__ = """
 	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
 """
 
-__help__ = r"""{b}
+__banner__ = r"""{b}
 	{r}	_________________________________________________
 	{g}		________   {y}               __   
 	{g}		\_____  \  {y}  ____   _____/  |_
