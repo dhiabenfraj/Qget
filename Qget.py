@@ -34,10 +34,11 @@ __banner__ = r"""{b}
 	{g}		\_____\ \_/{y}\___  / \___  >__|  
 	{g}		       \__>{y}_____/      \/{blue}created by{g} xreaad		  
 	{r}	_________________________________________________ {y}
+{nc}
+""".format(b=bold, r=red, g=green, y=yellow, blue=blue, nc=nocolor)
 
-""".format(b=bold, r=red, g=green, y=yellow, blue=blue)
 
-
+print(__banner__)
 
 def start(job): # print the starting job
 	print(f'{blue}[{green}+{blue}]{yellow} {job}')
@@ -147,7 +148,7 @@ def parse():
 	parser.add_argument('-p', '--post', help='post data to the site', type=str)
 	parser.add_argument('-g', '--get', help='get data from the site', type=str)
 	parser.add_argument('-d', '--download', help='download file from the site', type=str)
-	parser.add_argument('url', help='url of the site url shoul start with http:// or https://', type=str)
+	parser.add_argument('url', help='url of the site url should start with http:// or https://', type=str)
 	return parser.parse_args()
 	
 
@@ -159,7 +160,3 @@ def Qget():
 
 if __name__ == '__main__':
 	Qget()
-
-
-
-
