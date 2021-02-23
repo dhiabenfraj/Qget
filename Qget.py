@@ -79,12 +79,16 @@ class searching():
 		return html_files, img_files, css_files, script_files
 
 	def user_search(self, **filtres):
+		"""
+		filtre the result of search using filtres kwargs
+		"""
 		self.tag_name = filtres['tagname']
 		self.class_name = filtres['classname']
 		self.id_name = filtres['id']
 
 		if self.tag_name != None:
 			tags_name = [tag_name for tag_name in self.soup.find_all(self.tag_name)]
+
 		
 		if self.class_name != None:
 			pass
