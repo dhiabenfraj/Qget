@@ -122,6 +122,21 @@ class filemanager():
 				os.makedirs(_dir)
 		print(directory)
 
+
+class Web:
+    """ 
+        
+    """
+    def __init__(self, url):
+        self.url = url
+
+    def post(self):
+        pass
+
+    def find(self):
+        pass
+
+
 def download(url, path):
 	elements = []
 	searcher = searching(url)
