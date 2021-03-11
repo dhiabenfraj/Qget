@@ -9,7 +9,6 @@ from time import sleep
 import requests
 import argparse
 
-
 red = '\033[91m'
 blue = '\033[94m'
 green = '\033[92m'
@@ -180,7 +179,4 @@ def Qget():
 
 if __name__ == '__main__':
 	Qget()
-
-
-
 
