@@ -20,7 +20,7 @@ bold = '\033[01m'
 __author__ = 'xreaad'
 __password__ = '0xreaad'
 
-__description__ = """
+__doc__ = """
 	Qget is a tool based on (python oop) created by xreaad to scrapping web sites && a lot more things like 
 	post && get data, download files from site, get information from site, finding elemnts of the site, etc ..
 """
@@ -122,6 +122,7 @@ class filemanager():
 		print(directory)
 
 
+
 class Web:
     """ 
         
@@ -155,7 +156,7 @@ def download(url, path):
 			f.write(re)
 
 def parse():
-	parser = argparse.ArgumentParser(description=__description__)
+	parser = argparse.ArgumentParser(description=__doc__)
 	parser.add_argument('-a', '--all', help='search in all file of the site', action='store_true')
 	parser.add_argument('-s', '--script', help='get all script file from the site', action='store_true')
 	parser.add_argument('-f', '--file', help='get file from the site', action='store_true')
@@ -179,4 +180,3 @@ def Qget():
 
 if __name__ == '__main__':
 	Qget()
-
