@@ -172,11 +172,9 @@ def parse():
 	return parser.parse_args()
 	
 
-def Qget():
+if __name__ == '__main__':
 	args = parse()
 	search = searching(args.url)
 	download(args.url, args.output)
 
 
-if __name__ == '__main__':
-	Qget()
